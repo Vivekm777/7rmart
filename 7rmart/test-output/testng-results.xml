@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-15T10:56:26 IST" name="Default suite" finished-at="2024-08-15T10:56:36 IST" duration-ms="10331">
+    <groups>
+    </groups>
+    <test started-at="2024-08-15T10:56:26 IST" name="Default test" finished-at="2024-08-15T10:56:36 IST" duration-ms="10331">
+      <class name="testscript.SubCategoryTest">
+        <test-method is-config="true" signature="intialiseBrowser()[pri:0, instance:testscript.SubCategoryTest@2d3379b4]" started-at="2024-08-15T10:56:26 IST" name="intialiseBrowser" finished-at="2024-08-15T10:56:30 IST" duration-ms="4448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialiseBrowser -->
+        <test-method signature="ToverifyUserIsAbleToChangeSubcategoryStatus()[pri:0, instance:testscript.SubCategoryTest@2d3379b4]" started-at="2024-08-15T10:56:31 IST" name="ToverifyUserIsAbleToChangeSubcategoryStatus" finished-at="2024-08-15T10:56:36 IST" duration-ms="5325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ToverifyUserIsAbleToChangeSubcategoryStatus -->
+        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.SubCategoryTest@2d3379b4]" started-at="2024-08-15T10:56:36 IST" name="driverQuitAndClose" finished-at="2024-08-15T10:56:36 IST" duration-ms="416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuitAndClose -->
+      </class> <!-- testscript.SubCategoryTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
