@@ -14,7 +14,7 @@ this.driver=driver;
 PageFactory.initElements(driver,this);
 	
 }
-@FindBy(xpath="(//i[@class=' fa fa-newspaper widget-stat-icon']//following::a)[1]") WebElement manageNewsMoreInfo;
+@FindBy(xpath="//a[contains(@href,'list-news') and contains(@class,'small')]") WebElement manageNewsMoreInfo;
 @FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") WebElement managenewsnew;
 @FindBy(xpath="//textarea[@placeholder='Enter the news']") WebElement enterTheNewsTextField;
 @FindBy(xpath="//button[text()='Save']") WebElement newsSaveButton;

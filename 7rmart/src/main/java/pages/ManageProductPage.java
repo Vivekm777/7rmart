@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageProductPage {
 WebDriver driver;
 public ManageProductPage(WebDriver driver)
@@ -13,7 +15,7 @@ this.driver=driver;
 PageFactory.initElements(driver,this);
 }
 
-@FindBy(xpath="(//a[text()='More info '])[7]") WebElement manageProductMoreInfo;
+@FindBy(xpath="//a[contains(@href,'list-product') and contains(@class,'small')]") WebElement manageProductMoreInfo;
 @FindBy(xpath="(//a[@class='btn btn-sm btn btn-danger btncss'])[1]/i") WebElement productDeleteButton;
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement ProductDeletionAlert;
 
@@ -24,20 +26,23 @@ manageProductMoreInfo.click();
 	
 }
 
+
 public void clickOnProductDeletionButton()
 {
 productDeleteButton.click();	
 }
 
-public void AcceptAlert()
+
+public void AcceptAlert() 
 {
 	
-driver.switchTo().alert().accept();	
+PageUtility pageutility=new PageUtility();
+pageutility.acceptAlert(driver);
 }
+
 
 public boolean isProductDeletionAlertDisplayed()
 {
-	
 	return ProductDeletionAlert.isDisplayed();
 }
 

@@ -12,7 +12,7 @@ import pages.ManageContactPage;
 import utilities.ExcelUtility;
 
 public class ManageContactTest extends Base {
-@Test
+@Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to update contact details in the ManageContactPage")
 public void verifyUserisAbleToUpdateContactUsDetails() throws IOException
 {
 	   String userName=ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -24,10 +24,15 @@ public void verifyUserisAbleToUpdateContactUsDetails() throws IOException
 	   ManageContactPage contactpage=new ManageContactPage(driver);
 	   contactpage.clickOnManageContactMoreInfo();
 	   contactpage.clickOnActionButton();
+	   contactpage.clearTextOnPhoneNumberField();
 	   contactpage.enterTextOnPhoneNumberField(ExcelUtility.getIntegerData(1, 0, "Manage Contact Page"));
+	   contactpage.clearTextOnEmailField();
 	   contactpage.enterTextOnEmailField(ExcelUtility.getStringData(1, 1, "Manage Contact Page"));
+	   contactpage.clearTextonAddressField();
 	   contactpage.enterTextonAddressField(ExcelUtility.getStringData(1, 2, "Manage Contact Page"));
+	   contactpage.clearTextonDeliveryTimeField();
 	   contactpage.enterTextonDeliveryTimeField(ExcelUtility.getStringData(1, 3, "Manage Contact Page"));
+	   contactpage.clearTextonDeliveryChargeLimitField();
 	   contactpage.enterTextonDeliveryChargeLimitField(ExcelUtility.getIntegerData(1, 4, "Manage Contact Page"));
 	   contactpage.clickoncontactUsUpdateButtonUsingJavaScriptExecutor();
 	   boolean isAlertForContactUsUpdationDisplayed=contactpage.isAlertForContactUsUpdationDisplayed();

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+&lt;build>
+        &lt;plugins>
+            &lt;plugin>
+                &lt;groupId>org.apache.maven.plugins&lt;/groupId>
+                &lt;artifactId>maven-compiler-plugin&lt;/artifactId>
+                &lt;version>3.8.1&lt;/version>
+                &lt;configuration>
+                    &lt;source>1.8&lt;/source>
+                    &lt;target>1.8&lt;/target>
+                &lt;/configuration>
+            &lt;/plugin>
+            &lt;plugin>
+                &lt;groupId>org.apache.maven.plugins&lt;/groupId>
+                &lt;artifactId>maven-surefire-plugin&lt;/artifactId>
+                &lt;version>3.0.0-M5&lt;/version>
+                &lt;configuration>
+                    &lt;testFailureIgnore>true&lt;/testFailureIgnore>
+                    &lt;suiteXmlFiles>
+                        &lt;suiteXmlFile>testng.xml&lt;/suiteXmlFile>
+                    &lt;/suiteXmlFiles>
+                &lt;/configuration>
+            &lt;/plugin>
+        &lt;/plugins>
+    &lt;/build>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="browser" value="Chrome"></parameter>
+<listeners>
+	<listener class-name="generatereport.Listeners"></listener>
+</listeners>
+  <test thread-count="5" name="Testng">
+    <classes>
+    <class name="testscript.LoginTest">
+	<methods>
+	<include name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword"></include>
+	<!--<include name="verifyUserIsAbleToAddAdminUsers"></include>
+	<include name="verifyUserIsAbleToAddNewCategory"></include>
+	<include name="verifyUserisAbleToUpdateContactUsDetails"></include>
+	<include name="verifyUserIsAbleToUpdateFooterText"></include>-->
+	<!--<include name="verifyUserIsAbleToAddNews"></include>-->
+	<!--<include name="verifyUserIsAbleToDeleteProduct"></include>-->
+	<!--<include name="verifyUserIsAbleToManageMenu"></include>-->
+	<!--<include name="ToverifyUserIsAbleToChangeSubcategoryStatus"></include>-->
+	<!--<include name="ToverifyUserIsAbleToAddNewSubCategory"></include>-->
+	<!--<include name="verifyUserIsAbleToLogoutOfTheApplication"></include>-->
+ 	<!--<exclude name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword"></exclude>-->
+	<!--<exclude name="VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword"></exclude>
+	<exclude name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword"></exclude>-->
+	</methods>
+    </class>
+    </classes>
+  </test> <!-- Testng.xml -->
+</suite> <!-- Suite -->

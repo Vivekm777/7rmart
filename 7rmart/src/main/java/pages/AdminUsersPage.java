@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 public class AdminUsersPage {
 WebDriver driver;
 
@@ -16,7 +18,7 @@ this.driver=driver;
 PageFactory.initElements(driver, this);
 }
 
-@FindBy(xpath = "(//a[text()='More info '])[1]") WebElement adminUsersMoreInfo;
+@FindBy(xpath = "//a[contains(@href,'list-admin') and contains(@class,'small')]") WebElement adminUsersMoreInfo;
 @FindBy(xpath = "//a[contains(@class,'btn btn-rounded btn-dange')]") WebElement adminUsersNewButton;
 @FindBy(xpath = "//input[@id='username']") WebElement adminUsersUserNameField;
 @FindBy(xpath = "//input[@id='password']") WebElement adminUsersPasswordField;
@@ -49,16 +51,18 @@ public void enterTextOnadminUsersPasswordField(String password)
 	adminUsersPasswordField.sendKeys(password);
 }
 
-public void selectUserTypeFromSelectDropdown(String value)
+
+public void selectUserTypeFromSelectDropdown()
 {
-	Select obj=new Select(adminUsersSelectDropdown);
-	obj.selectByValue(value);
+	PageUtility pageutility=new PageUtility();
+	pageutility.selectDropdownByValue(adminUsersSelectDropdown,"staff");
 	
 }
+
 public void clickonSaveButtonUsingJavaScriptExecutor()
 {
-	JavascriptExecutor executor=(JavascriptExecutor)driver;
-	executor.executeScript("arguments[0].click()",adminUsersSaveButton);
+	PageUtility pageutility=new PageUtility();
+	pageutility.javaSriptClick(driver, adminUsersSaveButton);
 }
 
 public boolean isAlertForUserCreationDisplayed()

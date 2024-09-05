@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base
 {
-	@Test
+	@Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to add new news in the ManageNewsPage")
 	public void verifyUserIsAbleToAddNews() throws IOException
 	{
 	   String userName=ExcelUtility.getStringData(1, 0, "LoginPage");

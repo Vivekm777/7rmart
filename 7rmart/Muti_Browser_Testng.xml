@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Multi Browser Testing" parallel="tests" thread-count="2">
+	
+<listeners>
+	<listener class-name="generatereport.Listeners"></listener>
+</listeners>
+  <test  name="Chrometest">
+	<parameter name="browser" value="Chrome"></parameter>
+    <classes>
+    <class name="testscript.LogoutTest">
+	<methods>
+	<include name="verifyUserIsAbleToLogoutOfTheApplication"></include>
+	</methods>
+    </class>
+    </classes>
+  </test> <!-- Testng.xml -->
+  <test  name="Edgetest">
+	<parameter name="browser" value="Edge"></parameter>
+    <classes>
+    <class name="testscript.LogoutTest">
+	<methods>
+	<include name="verifyUserIsAbleToLogoutOfTheApplication"></include>
+	</methods>
+    </class>
+    </classes>
+  </test> <!-- Testng.xml -->
+</suite> <!-- Suite -->

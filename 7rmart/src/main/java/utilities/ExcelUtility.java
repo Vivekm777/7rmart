@@ -21,9 +21,9 @@ public static FileInputStream f;
 public static XSSFWorkbook wb; 
 public static XSSFSheet sh; 
 		 		 
-		 	public static String getStringData(int i, int j, String sheet) throws IOException  
-		 	{ 
-		 		String file_path = Constants.TESTDATAFILE; 
+public static String getStringData(int i, int j, String sheet) throws IOException  
+{ 
+                String file_path = Constants.TESTDATAFILE; 
 		 		f=new FileInputStream(file_path); 
 		 		wb= new XSSFWorkbook(f); 
 		 		sh = wb.getSheet(sheet); 
@@ -32,7 +32,7 @@ public static XSSFSheet sh;
 		 		return c.getStringCellValue(); 
 		 	} 
 		 	
-		 	public static String getIntegerData(int i, int j, String sheet) throws IOException 
+public static String getIntegerData(int i, int j, String sheet) throws IOException 
 		 	{ 
 		 			String file_path = Constants.TESTDATAFILE; 
 		 			f=new FileInputStream(file_path); 

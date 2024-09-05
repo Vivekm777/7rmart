@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class AdminUsersTest extends Base
 {
-@Test	
+@Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to add new admin users in the adminuserspage")	
 public void verifyUserIsAbleToAddAdminUsers() throws IOException
 {
 	   String userName=ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -26,7 +26,7 @@ public void verifyUserIsAbleToAddAdminUsers() throws IOException
        adminUsersPage.clickOnAdminUsersNewButton();
        adminUsersPage.enterTextOnadminUsersUserNameField(ExcelUtility.getStringData(1, 0, "Admin Users Page"));
        adminUsersPage.enterTextOnadminUsersPasswordField(ExcelUtility.getStringData(1, 1, "Admin Users Page"));
-       adminUsersPage.selectUserTypeFromSelectDropdown(ExcelUtility.getStringData(1, 2, "Admin Users Page"));
+       adminUsersPage.selectUserTypeFromSelectDropdown();
        adminUsersPage.clickonSaveButtonUsingJavaScriptExecutor();
        boolean isAlertForUserCreationDisplayed=adminUsersPage.isAlertForUserCreationDisplayed();
        assertTrue(isAlertForUserCreationDisplayed, "User is unable to create newuser after clicking on new button in the admin Users page");

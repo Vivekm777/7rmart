@@ -11,7 +11,7 @@ import pages.ManageProductPage;
 import utilities.ExcelUtility;
 
 public class ManageProductTest extends Base {
-@Test
+@Test( retryAnalyzer = retry.Retry.class, description = "To verify whether user is delete a product from the product page")
 public void verifyUserIsAbleToDeleteProduct() throws IOException
 {
 String userName=ExcelUtility.getStringData(1, 0, "LoginPage");

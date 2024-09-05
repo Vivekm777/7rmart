@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageContactPage
 {
 
@@ -17,7 +19,7 @@ this.driver=driver;
 PageFactory.initElements(driver, this);
 	
 }
-@FindBy(xpath = "(//a[@class='small-box-footer'])[9]") WebElement manageContactMoreInfo;
+@FindBy(xpath = "//a[contains(@href,'list-contact') and contains(@class,'small')]") WebElement manageContactMoreInfo;
 @FindBy(xpath ="//a[contains(@class,'btn btn-sm')]/i") WebElement actionButton;
 @FindBy(xpath = "//input[@id='phone']") WebElement phoneNumberField;
 @FindBy(xpath="//input[@id='email']") WebElement emailField;
@@ -38,17 +40,34 @@ public void clickOnActionButton()
 	actionButton.click();
 }
 
+public void clearTextOnPhoneNumberField()
+{
+	
+   phoneNumberField.clear();
+}
+
 public void enterTextOnPhoneNumberField(String phonenumber)
 {
 	
 	phoneNumberField.sendKeys(phonenumber);
 }
 
+public void clearTextOnEmailField()
+{
+	emailField.clear();
+	
+}
 
 public void enterTextOnEmailField(String email)
 {
 	emailField.sendKeys(email);
 	
+}
+
+public void clearTextonAddressField()
+{
+	
+	addressField.clear();
 }
 
 public void enterTextonAddressField(String address)
@@ -57,10 +76,22 @@ public void enterTextonAddressField(String address)
 	addressField.sendKeys(address);
 }
 
+public void clearTextonDeliveryTimeField()
+{
+	
+	deliveryTimeField.clear();
+}
+
 public void enterTextonDeliveryTimeField(String deliverytime)
 {
 	
 	deliveryTimeField.sendKeys(deliverytime);
+}
+
+public void clearTextonDeliveryChargeLimitField()
+{
+	deliveryChargeLimitField.clear();
+	
 }
 
 public void enterTextonDeliveryChargeLimitField(String deliverychargelimit)
@@ -72,9 +103,8 @@ public void enterTextonDeliveryChargeLimitField(String deliverychargelimit)
 public void clickoncontactUsUpdateButtonUsingJavaScriptExecutor()
 {
 
-	JavascriptExecutor executor=(JavascriptExecutor)driver;
-	executor.executeScript("arguments[0].click()",contactUpdateButton);
-	
+	PageUtility pageutility=new PageUtility();
+	pageutility.javaSriptClick(driver, contactUpdateButton);
 }
 
 public boolean isAlertForContactUsUpdationDisplayed()
