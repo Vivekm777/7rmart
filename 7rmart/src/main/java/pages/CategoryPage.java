@@ -12,83 +12,87 @@ import utilities.FileUploadUtility;
 import utilities.PageUtility;
 
 public class CategoryPage {
-WebDriver driver;
-public CategoryPage(WebDriver driver)
-{
-	this.driver=driver;
-	PageFactory.initElements(driver,this);
-	
-}
+	WebDriver driver;
 
-@FindBy(xpath = "//a[contains(@href,'list-category') and contains(@class,'small')]") WebElement categoryMoreInfo;
-@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']") WebElement listCategoriesNewButton;
-@FindBy(xpath = "//input[@id='category']") WebElement addcategoryCategoryField;
-@FindBy(xpath="(//span[text()='discount'])[1]") WebElement selectGroupOption;
-@FindBy(xpath = "//input[@id='main_img']") WebElement addcategoryChoseFileButton;
-@FindBy(xpath="(//input[@value='yes'])[1]") WebElement showOnTopMenuRadioButton;
-@FindBy(xpath="(//input[@value='yes'])[2]") WebElement showOnLeftMenuRadioButton;
-@FindBy(xpath = "//button[text()='Save']") WebElement addCategorysaveButton;
-@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertForNewCategoryCreation;
+	public CategoryPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 
-public void clickOnCategoryMoreInfo()
-{
-categoryMoreInfo.click();	
-	
-}
+	}
 
-public void clickonlistCategoriesNewButton()
-{
-listCategoriesNewButton.click();	
-	
-}
+	@FindBy(xpath = "//a[contains(@href,'list-category') and contains(@class,'small')]")
+	WebElement categoryMoreInfo;
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
+	WebElement listCategoriesNewButton;
+	@FindBy(xpath = "//input[@id='category']")
+	WebElement addcategoryCategoryField;
+	@FindBy(xpath = "(//span[text()='discount'])[1]")
+	WebElement selectGroupOption;
+	@FindBy(xpath = "//input[@id='main_img']")
+	WebElement addcategoryChoseFileButton;
+	@FindBy(xpath = "(//input[@value='yes'])[1]")
+	WebElement showOnTopMenuRadioButton;
+	@FindBy(xpath = "(//input[@value='yes'])[2]")
+	WebElement showOnLeftMenuRadioButton;
+	@FindBy(xpath = "//button[text()='Save']")
+	WebElement addCategorysaveButton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement alertForNewCategoryCreation;
 
-public void enterTextOnaddcategoryCategoryField(String category)
-{
-addcategoryCategoryField.sendKeys(category);	
-	
-}
-public void clickOnselectGroupOption()
-{
+	public CategoryPage clickOnCategoryMoreInfo() {
+		categoryMoreInfo.click();
+		return this;
 
-PageUtility pageutility=new PageUtility();
-pageutility.javaSriptClick(driver, selectGroupOption);
-}
+	}
 
-public void uploadImageUsingaddcategoryChoseFileButton() throws AWTException
-{
-	FileUploadUtility fileuploadutility=new FileUploadUtility();
-	fileuploadutility.fileUploadUsingSendKeys(addcategoryChoseFileButton, Constants.CHOCOLATEIMAGE);
-	
-}
+	public CategoryPage clickonlistCategoriesNewButton() {
+		listCategoriesNewButton.click();
+		return this;
+	}
 
-public void clickOnshowOnTopMenuRadioButton()
-{
+	public CategoryPage enterTextOnaddcategoryCategoryField(String category) {
+		addcategoryCategoryField.sendKeys(category);
+		return this;
+	}
 
-	PageUtility pageutility=new PageUtility();
-	pageutility.javaSriptClick(driver,showOnTopMenuRadioButton);	
-}
+	public CategoryPage clickOnselectGroupOption() {
 
-public void clickOnshowOnLeftMenuRadioButton()
-{
+		PageUtility pageutility = new PageUtility();
+		pageutility.javaSriptClick(driver, selectGroupOption);
+		return this;
+	}
 
-PageUtility pageutility=new PageUtility();
-pageutility.javaSriptClick(driver,showOnLeftMenuRadioButton);
-	
-}
+	public CategoryPage uploadImageUsingaddcategoryChoseFileButton() throws AWTException {
+		FileUploadUtility fileuploadutility = new FileUploadUtility();
+		fileuploadutility.fileUploadUsingSendKeys(addcategoryChoseFileButton, Constants.CHOCOLATEIMAGE);
+		return this;
+	}
 
-public void  clickOnAddCategorysaveButton()
-{
-	
+	public CategoryPage clickOnshowOnTopMenuRadioButton() {
 
-PageUtility pageutility=new PageUtility();
-pageutility.javaSriptClick(driver, addCategorysaveButton);
+		PageUtility pageutility = new PageUtility();
+		pageutility.javaSriptClick(driver, showOnTopMenuRadioButton);
+		return this;
+	}
 
-}
+	public CategoryPage clickOnshowOnLeftMenuRadioButton() {
 
-public boolean isAlertForNewCategoryCreationCreated()
-{
-	
-return alertForNewCategoryCreation.isDisplayed();
-}
+		PageUtility pageutility = new PageUtility();
+		pageutility.javaSriptClick(driver, showOnLeftMenuRadioButton);
+		return this;
+
+	}
+
+	public CategoryPage clickOnAddCategorysaveButton() {
+
+		PageUtility pageutility = new PageUtility();
+		pageutility.javaSriptClick(driver, addCategorysaveButton);
+		return this;
+	}
+
+	public boolean isAlertForNewCategoryCreationCreated() {
+
+		return alertForNewCategoryCreation.isDisplayed();
+	}
 
 }

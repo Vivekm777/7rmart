@@ -8,51 +8,40 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
 
 public class ManageProductPage {
-WebDriver driver;
-public ManageProductPage(WebDriver driver)
-{
-this.driver=driver;
-PageFactory.initElements(driver,this);
-}
+	WebDriver driver;
 
-@FindBy(xpath="//a[contains(@href,'list-product') and contains(@class,'small')]") WebElement manageProductMoreInfo;
-@FindBy(xpath="(//a[@class='btn btn-sm btn btn-danger btncss'])[1]/i") WebElement productDeleteButton;
-@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement ProductDeletionAlert;
+	public ManageProductPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
+	@FindBy(xpath = "//a[contains(@href,'list-product') and contains(@class,'small')]")
+	WebElement manageProductMoreInfo;
+	@FindBy(xpath = "(//a[@class='btn btn-sm btn btn-danger btncss'])[1]/i")
+	WebElement productDeleteButton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement ProductDeletionAlert;
 
-public void clickOnManageProductMoreInfo()
-{
-manageProductMoreInfo.click();	
-	
-}
+	public ManageProductPage clickOnManageProductMoreInfo() {
+		manageProductMoreInfo.click();
+		return this;
 
+	}
 
-public void clickOnProductDeletionButton()
-{
-productDeleteButton.click();	
-}
+	public  ManageProductPage clickOnProductDeletionButton() {
+		productDeleteButton.click();
+		return this;
+	}
 
+	public  ManageProductPage AcceptAlert() {
 
-public void AcceptAlert() 
-{
-	
-PageUtility pageutility=new PageUtility();
-pageutility.acceptAlert(driver);
-}
+		PageUtility pageutility = new PageUtility();
+		pageutility.acceptAlert(driver);
+		return this;
+	}
 
-
-public boolean isProductDeletionAlertDisplayed()
-{
-	return ProductDeletionAlert.isDisplayed();
-}
-
-
-
-
-
-
-
-
-
+	public boolean isProductDeletionAlertDisplayed() {
+		return ProductDeletionAlert.isDisplayed();
+	}
 
 }

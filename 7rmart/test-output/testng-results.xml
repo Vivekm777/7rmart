@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T14:29:51 IST" name="Suite" finished-at="2024-08-28T14:30:34 IST" duration-ms="43388">
+  <suite started-at="2024-09-06T23:10:50 IST" name="Suite" finished-at="2024-09-06T23:11:07 IST" duration-ms="17163">
     <groups>
-      <group name="Regression">
-        <method signature="LoginTest.VerifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@5c7bfdc1]" name="VerifyTheUserIsAbleToLoginUsingValidCredentials" class="testscript.LoginTest"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-08-28T14:29:51 IST" name="Testng" finished-at="2024-08-28T14:30:34 IST" duration-ms="43388">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="intialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:29:56 IST" name="intialiseBrowser" finished-at="2024-08-28T14:30:05 IST" duration-ms="9299" status="PASS">
+    <test started-at="2024-09-06T23:10:50 IST" name="Testng" finished-at="2024-09-06T23:11:07 IST" duration-ms="17163">
+      <class name="testscript.AdminUsersTest">
+        <test-method is-config="true" signature="intialiseBrowser(java.lang.String)[pri:0, instance:testscript.AdminUsersTest@69504ae9]" started-at="2024-09-06T23:10:50 IST" name="intialiseBrowser" finished-at="2024-09-06T23:10:57 IST" duration-ms="7724" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,112 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialiseBrowser -->
-        <test-method signature="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:05 IST" name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword" description="to verify user is unable to login to the application using Invalid username and Invalid password" data-provider="loginprovider" finished-at="2024-08-28T14:30:06 IST" duration-ms="1254" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ad]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyUserIsAbleToAddAdminUsers()[pri:0, instance:testscript.AdminUsersTest@69504ae9]" started-at="2024-09-06T23:10:57 IST" name="verifyUserIsAbleToAddAdminUsers" description="To verify user is able to add new admin users in the adminuserspage" finished-at="2024-09-06T23:11:05 IST" duration-ms="7988" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:06 IST" name="browserQuit" finished-at="2024-08-28T14:30:07 IST" duration-ms="692" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToAddAdminUsers -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminUsersTest@69504ae9]" started-at="2024-09-06T23:11:05 IST" name="browserQuit" finished-at="2024-09-06T23:11:07 IST" duration-ms="1333" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToAddAdminUsers status=SUCCESS method=AdminUsersTest.verifyUserIsAbleToAddAdminUsers()[pri:0, instance:testscript.AdminUsersTest@69504ae9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:07 IST" name="intialiseBrowser" finished-at="2024-08-28T14:30:14 IST" duration-ms="6563" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intialiseBrowser -->
-        <test-method signature="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword()[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:14 IST" name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword" description="to verify user is unable to login to the application using Invalid username and valid password" finished-at="2024-08-28T14:30:15 IST" duration-ms="1159" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:15 IST" name="browserQuit" finished-at="2024-08-28T14:30:15 IST" duration-ms="477" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword status=SUCCESS method=LoginTest.VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword()[pri:0, instance:testscript.LoginTest@5c7bfdc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:15 IST" name="intialiseBrowser" finished-at="2024-08-28T14:30:21 IST" duration-ms="5215" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intialiseBrowser -->
-        <test-method signature="VerifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:21 IST" name="VerifyTheUserIsAbleToLoginUsingValidCredentials" description="To verify is user is able to login to the application" finished-at="2024-08-28T14:30:24 IST" duration-ms="3280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyTheUserIsAbleToLoginUsingValidCredentials -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:24 IST" name="browserQuit" finished-at="2024-08-28T14:30:25 IST" duration-ms="739" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyTheUserIsAbleToLoginUsingValidCredentials status=SUCCESS method=LoginTest.VerifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@5c7bfdc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:25 IST" name="intialiseBrowser" finished-at="2024-08-28T14:30:29 IST" duration-ms="4281" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intialiseBrowser -->
-        <test-method signature="VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword()[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:29 IST" name="VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword" description="to verify user is unable to login to the application using valid username and Invalid password" finished-at="2024-08-28T14:30:32 IST" duration-ms="3216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@5c7bfdc1]" started-at="2024-08-28T14:30:32 IST" name="browserQuit" finished-at="2024-08-28T14:30:34 IST" duration-ms="2210" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword()[pri:0, instance:testscript.LoginTest@5c7bfdc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.AdminUsersTest -->
     </test> <!-- Testng -->
   </suite> <!-- Suite -->
 </testng-results>

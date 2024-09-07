@@ -9,108 +9,116 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
 
-public class ManageContactPage
-{
+public class ManageContactPage {
 
-WebDriver driver;
-public ManageContactPage(WebDriver driver)
-{
-this.driver=driver;
-PageFactory.initElements(driver, this);
-	
-}
-@FindBy(xpath = "//a[contains(@href,'list-contact') and contains(@class,'small')]") WebElement manageContactMoreInfo;
-@FindBy(xpath ="//a[contains(@class,'btn btn-sm')]/i") WebElement actionButton;
-@FindBy(xpath = "//input[@id='phone']") WebElement phoneNumberField;
-@FindBy(xpath="//input[@id='email']") WebElement emailField;
-@FindBy(xpath = "//textarea[@name='address']") WebElement addressField;
-@FindBy(xpath = "//textarea[@name='del_time']") WebElement deliveryTimeField;
-@FindBy(xpath = "//input[@id='del_limit']") WebElement deliveryChargeLimitField;
-@FindBy(xpath = "//button[@type='submit']") WebElement contactUpdateButton;
-@FindBy(xpath = "//div[contains(@class,'alert alert')]") WebElement contactUsUpdationAlert;
+	WebDriver driver;
 
-public void clickOnManageContactMoreInfo()
-{
-manageContactMoreInfo.click();
-	
-}
+	public ManageContactPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 
-public void clickOnActionButton()
-{
-	actionButton.click();
-}
+	}
 
-public void clearTextOnPhoneNumberField()
-{
-	
-   phoneNumberField.clear();
-}
+	@FindBy(xpath = "//a[contains(@href,'list-contact') and contains(@class,'small')]")
+	WebElement manageContactMoreInfo;
+	@FindBy(xpath = "//a[contains(@class,'btn btn-sm')]/i")
+	WebElement actionButton;
+	@FindBy(xpath = "//input[@id='phone']")
+	WebElement phoneNumberField;
+	@FindBy(xpath = "//input[@id='email']")
+	WebElement emailField;
+	@FindBy(xpath = "//textarea[@name='address']")
+	WebElement addressField;
+	@FindBy(xpath = "//textarea[@name='del_time']")
+	WebElement deliveryTimeField;
+	@FindBy(xpath = "//input[@id='del_limit']")
+	WebElement deliveryChargeLimitField;
+	@FindBy(xpath = "//button[@type='submit']")
+	WebElement contactUpdateButton;
+	@FindBy(xpath = "//div[contains(@class,'alert alert')]")
+	WebElement contactUsUpdationAlert;
 
-public void enterTextOnPhoneNumberField(String phonenumber)
-{
-	
-	phoneNumberField.sendKeys(phonenumber);
-}
+	public ManageContactPage clickOnManageContactMoreInfo() {
+		manageContactMoreInfo.click();
+		return this;
 
-public void clearTextOnEmailField()
-{
-	emailField.clear();
-	
-}
+	}
 
-public void enterTextOnEmailField(String email)
-{
-	emailField.sendKeys(email);
-	
-}
+	public ManageContactPage  clickOnActionButton() {
+		actionButton.click();
+		return this;
+	}
 
-public void clearTextonAddressField()
-{
-	
-	addressField.clear();
-}
+	public ManageContactPage clearTextOnPhoneNumberField() {
 
-public void enterTextonAddressField(String address)
-{
-	
-	addressField.sendKeys(address);
-}
+		phoneNumberField.clear();
+		return this;
+	}
 
-public void clearTextonDeliveryTimeField()
-{
-	
-	deliveryTimeField.clear();
-}
+	public ManageContactPage enterTextOnPhoneNumberField(String phonenumber) {
 
-public void enterTextonDeliveryTimeField(String deliverytime)
-{
-	
-	deliveryTimeField.sendKeys(deliverytime);
-}
+		phoneNumberField.sendKeys(phonenumber);
+		return this;
+	}
 
-public void clearTextonDeliveryChargeLimitField()
-{
-	deliveryChargeLimitField.clear();
-	
-}
+	public ManageContactPage clearTextOnEmailField() {
+		emailField.clear();
+		return this;
 
-public void enterTextonDeliveryChargeLimitField(String deliverychargelimit)
-{
-	deliveryChargeLimitField.sendKeys(deliverychargelimit);
-	
-}
+	}
 
-public void clickoncontactUsUpdateButtonUsingJavaScriptExecutor()
-{
+	public ManageContactPage enterTextOnEmailField(String email) {
+		emailField.sendKeys(email);
+		return this;
 
-	PageUtility pageutility=new PageUtility();
-	pageutility.javaSriptClick(driver, contactUpdateButton);
-}
+	}
 
-public boolean isAlertForContactUsUpdationDisplayed()
-{
-	
-	return contactUsUpdationAlert.isDisplayed();
-}
+	public ManageContactPage clearTextonAddressField() {
+
+		addressField.clear();
+		return this;
+	}
+
+	public ManageContactPage enterTextonAddressField(String address) {
+
+		addressField.sendKeys(address);
+		return this;
+	}
+
+	public ManageContactPage clearTextonDeliveryTimeField() {
+
+		deliveryTimeField.clear();
+		return this;
+	}
+
+	public ManageContactPage enterTextonDeliveryTimeField(String deliverytime) {
+
+		deliveryTimeField.sendKeys(deliverytime);
+		return this;
+	}
+
+	public ManageContactPage clearTextonDeliveryChargeLimitField() {
+		deliveryChargeLimitField.clear();
+		return this;
+
+	}
+
+	public ManageContactPage enterTextonDeliveryChargeLimitField(String deliverychargelimit) {
+		deliveryChargeLimitField.sendKeys(deliverychargelimit);
+		return this;
+
+	}
+
+	public ManageContactPage clickoncontactUsUpdateButtonUsingJavaScriptExecutor() {
+
+		PageUtility pageutility = new PageUtility();
+		pageutility.javaSriptClick(driver, contactUpdateButton);
+		return this;
+	}
+
+	public boolean isAlertForContactUsUpdationDisplayed() {
+
+		return contactUsUpdationAlert.isDisplayed();
+	}
 
 }
