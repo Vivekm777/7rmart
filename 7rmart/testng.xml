@@ -7,11 +7,11 @@
 </listeners>
   <test thread-count="5" name="Testng">
     <classes>
-    <class name="testscript.CategoryTest">
+    <class name="testscript.AdminUsersPage">
 	<methods>
 	<!--<include name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword"></include>-->
-	<!--<include name="verifyUserIsAbleToAddAdminUsers"></include>-->
-	<include name="verifyUserIsAbleToAddNewCategory"></include>
+	<include name="verifyUserIsAbleToAddAdminUsers"></include>
+	<!--<include name="verifyUserIsAbleToAddNewCategory"></include>-->
 	<!--<include name="verifyUserisAbleToUpdateContactUsDetails"></include>
 	<include name="verifyUserIsAbleToUpdateFooterText"></include>-->
 	<!--<include name="verifyUserIsAbleToAddNews"></include>-->
