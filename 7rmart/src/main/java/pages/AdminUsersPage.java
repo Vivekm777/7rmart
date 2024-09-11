@@ -63,10 +63,10 @@ public class AdminUsersPage {
 
 	}
 
-	public AdminUsersPage clickonSaveButtonUsingJavaScriptExecutor() {
+	public CategoryPage clickonSaveButtonUsingJavaScriptExecutor() {
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, adminUsersSaveButton);
-		return this;
+		return new CategoryPage(driver);
 	}
 
 	public boolean isAlertForUserCreationDisplayed() {

@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Testng(failed)">
     <classes>
-      <class name="testscript.SubCategoryTest">
+      <class name="testscript.AdminUsersTest">
         <methods>
           <include name="intialiseBrowser"/>
-          <include name="ToverifyUserIsAbleToChangeSubcategoryStatus"/>
+          <include name="verifyUserIsAbleToAddAdminUsers"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- testscript.SubCategoryTest -->
+      </class> <!-- testscript.AdminUsersTest -->
     </classes>
   </test> <!-- Testng(failed) -->
 </suite> <!-- Failed suite [Suite] -->

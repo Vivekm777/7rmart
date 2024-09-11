@@ -1,4 +1,4 @@
-package testscript;
+ package testscript;
 
 import static org.testng.Assert.assertTrue;
 
@@ -9,27 +9,33 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import constants.Constants;
+import pages.AdminUsersPage;
 import pages.CategoryPage;
 import pages.LoginPage;
+import pages.ManageContactPage;
 import utilities.ExcelUtility;
 
 public class CategoryTest extends Base {
+	public CategoryPage category;
+	public AdminUsersPage admin;
+	public LoginPage login;	
+	
+	
 @Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to create new category in the category page")
-public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException, InterruptedException 
-{
+public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException, InterruptedException {
 	   String userName=ExcelUtility.getStringData(1, 0, "LoginPage");
 	   String password=ExcelUtility.getStringData(1, 1, "LoginPage");
-	   String category=ExcelUtility.getStringData(1, 0,"Category Page");
-	   LoginPage loginPage=new LoginPage(driver);
-	   loginPage.enterUserNameOnUserField(userName);
-	   loginPage.enterPasswordonPasswordField(password);
-	   loginPage.clickOnSigInButton();	
+	   String categoryname=ExcelUtility.getStringData(1, 0,"Category Page");
+	  LoginPage login=new LoginPage(driver);
+	   login.enterUserNameOnUserField(userName);
+	   login.enterPasswordonPasswordField(password);
+	   login.clickOnSigInButton();	
 	   CategoryPage categorypage=new CategoryPage(driver);
-	   categorypage.clickOnCategoryMoreInfo().clickonlistCategoriesNewButton().enterTextOnaddcategoryCategoryField(category).clickOnselectGroupOption().uploadImageUsingaddcategoryChoseFileButton().clickOnshowOnTopMenuRadioButton().clickOnshowOnLeftMenuRadioButton().clickOnAddCategorysaveButton();
+	   categorypage.clickOnCategoryMoreInfo().clickonlistCategoriesNewButton().enterTextOnaddcategoryCategoryField(categoryname).clickOnselectGroupOption().uploadImageUsingaddcategoryChoseFileButton().clickOnshowOnTopMenuRadioButton().clickOnshowOnLeftMenuRadioButton().clickOnAddCategorysaveButton();
 	   //categorypage.clickonlistCategoriesNewButton();
 	   //categorypage.enterTextOnaddcategoryCategoryField(category);
 	   //categorypage.clickOnselectGroupOption();
-	  //categorypage.uploadImageUsingaddcategoryChoseFileButton();
+	   //categorypage.uploadImageUsingaddcategoryChoseFileButton();
 	   //categorypage.clickOnshowOnTopMenuRadioButton();
 	   //categorypage.clickOnshowOnLeftMenuRadioButton();
 	   //categorypage.clickOnAddCategorysaveButton();
@@ -38,6 +44,8 @@ public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException,
 	   
 	
 }
+
+
 	
 	
 	

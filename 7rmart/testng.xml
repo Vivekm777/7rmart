@@ -7,19 +7,19 @@
 </listeners>
   <test thread-count="5" name="Testng">
     <classes>
-    <class name="testscript.AdminUsersTest">
+    <class name="testscript.CategoryTest">
 	<methods>
 	<!--<include name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword"></include>-->
-	<include name="verifyUserIsAbleToAddAdminUsers"></include>
-	<!--<include name="verifyUserIsAbleToAddNewCategory"></include>
-	<include name="verifyUserisAbleToUpdateContactUsDetails"></include>
-	<include name="verifyUserIsAbleToUpdateFooterText"></include>
-	<include name="verifyUserIsAbleToAddNews"></include>
-	<include name="verifyUserIsAbleToDeleteProduct"></include>
+	<!--<include name="verifyUserIsAbleToAddAdminUsers"></include>-->
+	<include name="verifyUserIsAbleToAddNewCategory"></include>
+	<!--<include name="verifyUserisAbleToUpdateContactUsDetails"></include>
+	<include name="verifyUserIsAbleToUpdateFooterText"></include>-->
+	<!--<include name="verifyUserIsAbleToAddNews"></include>-->
+<!--	<include name="verifyUserIsAbleToDeleteProduct"></include>
 	<include name="verifyUserIsAbleToManageMenu"></include>
 	<include name="ToverifyUserIsAbleToChangeSubcategoryStatus"></include>
-	<include name="ToverifyUserIsAbleToAddNewSubCategory"></include>
-	<include name="verifyUserIsAbleToLogoutOfTheApplication"></include>
+	<include name="ToverifyUserIsAbleToAddNewSubCategory"></include>-->
+	<!--<include name="verifyUserIsAbleToLogoutOfTheApplication"></include>
  	<exclude name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword"></exclude>
 	<exclude name="VerifyTheUserIsAbleToLoginUsingvalidUsernameAndInvalidPassword"></exclude>
 	<exclude name="VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword"></exclude>-->

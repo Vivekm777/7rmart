@@ -21,6 +21,8 @@ public class LoginPage {
 	WebElement siginButton;
 	@FindBy(xpath = "//p[text()='Dashboard']")
 	WebElement dashboard;
+	@FindBy(xpath = "//a[contains(@href,'list-category') and contains(@class,'small')]")
+	WebElement categoryMoreInfo;
 	@FindBy(xpath = "//div[contains(@class,'alert alert')]")
 	WebElement AlertForInvalidLogin;
 
@@ -36,11 +38,12 @@ public class LoginPage {
 		return this;
 	}
 
-	public LoginPage clickOnSigInButton() {
+	public AdminUsersPage clickOnSigInButton() {
 		siginButton.click();
-		return this;
+		return new AdminUsersPage(driver);
 
 	}
+	
 
 	public boolean isHomePageLoaded() {
 		return dashboard.isDisplayed();
