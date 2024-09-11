@@ -27,11 +27,9 @@ import utilities.ExcelUtility;
 	   String password=ExcelUtility.getStringData(1, 1, "LoginPage");
 	   String categoryname=ExcelUtility.getStringData(1, 0,"Category Page");
 	   LoginPage login=new LoginPage(driver);
-	   login.enterUserNameOnUserField(userName);
-	   login.enterPasswordonPasswordField(password);
-	   login.clickOnSigInButton();	
+	   login.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
 	   CategoryPage categorypage=new CategoryPage(driver);
-	   categorypage.clickOnCategoryMoreInfo().clickonlistCategoriesNewButton().enterTextOnaddcategoryCategoryField(categoryname).clickOnselectGroupOption().uploadImageUsingaddcategoryChoseFileButton().clickOnshowOnTopMenuRadioButton().clickOnshowOnLeftMenuRadioButton().clickOnAddCategorysaveButton();
+	   categorypage.clickOnCategoryMoreInfo().clickonlistCategoriesNewButton().enterTextOnaddcategoryCategoryField(categoryname).clickOnselectGroupOption().uploadImageUsingaddcategoryChoseFileButton().clickOnTopMenuRadioButton().clickOnLeftMenuRadioButton().clickOnAddCategorysaveButton();
 	   boolean isAlertForNewCategoryCreationCreated =categorypage.isAlertForNewCategoryCreationCreated();
 	   assertTrue(isAlertForNewCategoryCreationCreated,Constants.InvalidCategoryCreationMessage);
 	   

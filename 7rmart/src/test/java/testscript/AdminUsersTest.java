@@ -25,7 +25,7 @@ public class AdminUsersTest extends Base {
 		String adminPassword = ExcelUtility.getStringData(1, 1, "Admin Users Page");
 		login = new LoginPage(driver);
 		admin = login.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-		category = admin.clickOnAdminUsersMoreInfo().clickOnAdminUsersNewButton().enterTextOnadminUsersUserNameField(adminUsername).enterTextOnadminUsersPasswordField(adminPassword).selectUserTypeFromSelectDropdown().clickonSaveButtonUsingJavaScriptExecutor();
+		category = admin.clickOnAdminUsersMoreInfo().clickOnAdminUsersNewButton().enterTextOnadminUsersUserNameField(adminUsername).enterTextOnadminUsersPasswordField(adminPassword).selectUserTypeFromSelectDropdown().clickonSaveButton();
 		boolean isAlertForUserCreationDisplayed = admin.isAlertForUserCreationDisplayed();
 		assertTrue(isAlertForUserCreationDisplayed, Constants.adminInvalidUsersUserCreationMessage);
 

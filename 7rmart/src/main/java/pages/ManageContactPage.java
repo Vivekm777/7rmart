@@ -109,7 +109,7 @@ public class ManageContactPage {
 
 	}
 
-	public ManageContactPage clickoncontactUsUpdateButtonUsingJavaScriptExecutor() {
+	public ManageContactPage clickoncontactUsUpdateButton() {
 
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, contactUpdateButton);

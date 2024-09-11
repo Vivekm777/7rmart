@@ -18,9 +18,7 @@ public class ManageNewsTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		String news=ExcelUtility.getStringData(1, 0, "Manage news page");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserField(userName);
-		loginPage.enterPasswordonPasswordField(password);
-		loginPage.clickOnSigInButton();
+		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
 		ManageNewsPage managenews = new ManageNewsPage(driver);
 		managenews.clickOnManageNewsMoreInfo().clickOnManageNewsNew().enterTextOnEnterTheNewsTextField(news).clickOnSaveNewsButton();
 		boolean isAletForNewscreationDisplayed = managenews.isAlertForNewsCreationDisplayed();

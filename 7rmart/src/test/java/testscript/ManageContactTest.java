@@ -23,11 +23,9 @@ public class ManageContactTest extends Base {
 		String deliveryTime=ExcelUtility.getStringData(1, 3, "Manage Contact Page");
 		String deliverychargelimit=ExcelUtility.getIntegerData(1, 4, "Manage Contact Page");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserField(userName);
-		loginPage.enterPasswordonPasswordField(password);
-		loginPage.clickOnSigInButton();
+		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
 		ManageContactPage contactpage = new ManageContactPage(driver);
-		contactpage.clickOnManageContactMoreInfo().clickOnActionButton().clearTextOnPhoneNumberField().enterTextOnPhoneNumberField(phoneNumber).clearTextOnEmailField().enterTextOnEmailField(email).clearTextonAddressField().enterTextonAddressField(address).clearTextonDeliveryTimeField().enterTextonDeliveryTimeField(deliveryTime).clearTextonDeliveryChargeLimitField().enterTextonDeliveryChargeLimitField(deliverychargelimit).clickoncontactUsUpdateButtonUsingJavaScriptExecutor();
+		contactpage.clickOnManageContactMoreInfo().clickOnActionButton().clearTextOnPhoneNumberField().enterTextOnPhoneNumberField(phoneNumber).clearTextOnEmailField().enterTextOnEmailField(email).clearTextonAddressField().enterTextonAddressField(address).clearTextonDeliveryTimeField().enterTextonDeliveryTimeField(deliveryTime).clearTextonDeliveryChargeLimitField().enterTextonDeliveryChargeLimitField(deliverychargelimit).clickoncontactUsUpdateButton();
         boolean isAlertForContactUsUpdationDisplayed = contactpage.isAlertForContactUsUpdationDisplayed();
 		assertTrue(isAlertForContactUsUpdationDisplayed,Constants.InvalidContactUpdateMessage);
 

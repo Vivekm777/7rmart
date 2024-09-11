@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
 
-public class Settings {
+public class SettingsPage {
 	WebDriver driver;
 
-	public Settings(WebDriver driver) {
+	public SettingsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
@@ -31,37 +31,37 @@ public class Settings {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement menuCreationAlert;
 
-	public Settings clickOnSettingsButton() {
+	public SettingsPage clickOnSettingsButton() {
 		settingsbutton.click();
         return this;
 	}
 
-	public Settings clickOnManageMenuButton() {
+	public SettingsPage clickOnManageMenuButton() {
 
 		ManagemenuButton.click();
 		 return this;
 	}
 
-	public Settings clickOnmenuManagementNewButton() {
+	public SettingsPage clickOnmenuManagementNewButton() {
 
 		menuManagementNewButton.click();
 		 return this;
 	}
 
-	public Settings enterTextOnMenuNameField(String menuname) {
+	public SettingsPage enterTextOnMenuNameField(String menuname) {
 		menuNameField.sendKeys(menuname);
 		 return this;
 
 	}
 
-	public Settings selectParentMenuFromDropdown() {
+	public SettingsPage selectParentMenuFromDropdown() {
 		PageUtility pageutility = new PageUtility();
 		pageutility.selectDropdownByVisibleText(parentmenuSelectDropdown, "Dashboard");
 		 return this;
 
 	}
 
-	public Settings clickonSaveButton() {
+	public SettingsPage clickonSaveButton() {
 
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, menuManagementSaveButton);

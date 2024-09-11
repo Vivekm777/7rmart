@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import constants.Constants;
 import pages.LoginPage;
-import pages.Logout;
+import pages.LogoutPage;
 import utilities.ExcelUtility;
 
 public class LogoutTest extends Base {
@@ -17,10 +17,8 @@ public class LogoutTest extends Base {
 		String userName = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserField(userName);
-		loginPage.enterPasswordonPasswordField(password);
-		loginPage.clickOnSigInButton();
-		Logout logout = new Logout(driver);
+		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
+		LogoutPage logout = new LogoutPage(driver);
 		logout.clickOnAdminImage().clickOnLogOutButton();
 		boolean isSigInButtonDisplayed = logout.isSigInButtonDisplayed();
 		assertTrue(isSigInButtonDisplayed,Constants.InvalidLogoutMessage);

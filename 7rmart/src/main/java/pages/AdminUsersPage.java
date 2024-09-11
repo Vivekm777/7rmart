@@ -63,7 +63,7 @@ public class AdminUsersPage {
 
 	}
 
-	public CategoryPage clickonSaveButtonUsingJavaScriptExecutor() {
+	public CategoryPage clickonSaveButton() {
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, adminUsersSaveButton);
 		return new CategoryPage(driver);

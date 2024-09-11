@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Logout {
+public class LogoutPage {
 	WebDriver driver;
 
-	public Logout(WebDriver driver) {
+	public LogoutPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
@@ -21,13 +21,13 @@ public class Logout {
 	@FindBy(xpath = "//button[text()='Sign In']")
 	WebElement sigInButton;
 
-	public Logout clickOnAdminImage() {
+	public LogoutPage clickOnAdminImage() {
 		adminImage.click();
 		return this;
 
 	}
 
-	public Logout clickOnLogOutButton() {
+	public LogoutPage clickOnLogOutButton() {
 		logoutButton.click();
 		return this;
 

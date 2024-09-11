@@ -21,9 +21,7 @@ public class ManageFooterTextTest extends Base {
 		String phoneNumber = ExcelUtility.getIntegerData(1, 2, "Manage FooterText Page");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUserNameOnUserField(userName);
-		loginPage.enterPasswordonPasswordField(password);
-		loginPage.clickOnSigInButton();
+		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
 		ManageFooterTextPage footertextpage = new ManageFooterTextPage(driver);
 		footertextpage.clickOnManageFooterTextMoreInfo().clickOnFooterTextActionButton().clearTextOnfooterTextAddressField().EnterTextOnfooterTextAddressField(address).EnterTextOnFooterTextEmailField(email).EnterTextOnFooterTextPhoneNumberField(phoneNumber).clickOnUpdateButton();
 		boolean isFooterTextUpdated = footertextpage.isFooterTextUpdated();

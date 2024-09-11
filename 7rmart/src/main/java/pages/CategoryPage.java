@@ -68,14 +68,14 @@ public class CategoryPage {
 		return this;
 	}
 
-	public CategoryPage clickOnshowOnTopMenuRadioButton() {
+	public CategoryPage clickOnTopMenuRadioButton() {
 
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, showOnTopMenuRadioButton);
 		return this;
 	}
 
-	public CategoryPage clickOnshowOnLeftMenuRadioButton() {
+	public CategoryPage clickOnLeftMenuRadioButton() {
 
 		PageUtility pageutility = new PageUtility();
 		pageutility.javaSriptClick(driver, showOnLeftMenuRadioButton);
