@@ -28,19 +28,7 @@ public class ManageContactTest extends Base {
 		loginPage.clickOnSigInButton();
 		ManageContactPage contactpage = new ManageContactPage(driver);
 		contactpage.clickOnManageContactMoreInfo().clickOnActionButton().clearTextOnPhoneNumberField().enterTextOnPhoneNumberField(phoneNumber).clearTextOnEmailField().enterTextOnEmailField(email).clearTextonAddressField().enterTextonAddressField(address).clearTextonDeliveryTimeField().enterTextonDeliveryTimeField(deliveryTime).clearTextonDeliveryChargeLimitField().enterTextonDeliveryChargeLimitField(deliverychargelimit).clickoncontactUsUpdateButtonUsingJavaScriptExecutor();
-		//contactpage.clickOnActionButton();
-		//contactpage.clearTextOnPhoneNumberField();
-		//contactpage.enterTextOnPhoneNumberField(phoneNumber);
-		//contactpage.clearTextOnEmailField();
-		//contactpage.enterTextOnEmailField(email);
-		//contactpage.clearTextonAddressField();
-		//contactpage.enterTextonAddressField(address);
-		//contactpage.clearTextonDeliveryTimeField();
-		//contactpage.enterTextonDeliveryTimeField(deliveryTime);
-		//contactpage.clearTextonDeliveryChargeLimitField();
-		//contactpage.enterTextonDeliveryChargeLimitField(deliverychargelimit);
-		//contactpage.clickoncontactUsUpdateButtonUsingJavaScriptExecutor();
-		boolean isAlertForContactUsUpdationDisplayed = contactpage.isAlertForContactUsUpdationDisplayed();
+        boolean isAlertForContactUsUpdationDisplayed = contactpage.isAlertForContactUsUpdationDisplayed();
 		assertTrue(isAlertForContactUsUpdationDisplayed,Constants.InvalidContactUpdateMessage);
 
 	}

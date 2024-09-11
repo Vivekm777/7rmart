@@ -22,7 +22,6 @@ public class LogoutTest extends Base {
 		loginPage.clickOnSigInButton();
 		Logout logout = new Logout(driver);
 		logout.clickOnAdminImage().clickOnLogOutButton();
-		//logout.clickOnLogOutButton();
 		boolean isSigInButtonDisplayed = logout.isSigInButtonDisplayed();
 		assertTrue(isSigInButtonDisplayed,Constants.InvalidLogoutMessage);
 

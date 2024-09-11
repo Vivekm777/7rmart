@@ -26,16 +26,6 @@ public class AdminUsersTest extends Base {
 	    login = new LoginPage(driver);
 	    admin=login.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
 	    category=admin.clickOnAdminUsersMoreInfo().clickOnAdminUsersNewButton().enterTextOnadminUsersUserNameField(adminUsername).enterTextOnadminUsersPasswordField(adminPassword).selectUserTypeFromSelectDropdown().clickonSaveButtonUsingJavaScriptExecutor();
-		//login.enterUserNameOnUserField(userName);
-		//login.enterPasswordonPasswordField(password);
-		//login.clickOnSigInButton();
-		//AdminUsersPage adminUsersPage = new AdminUsersPage(driver);
-		//adminUsersPage.clickOnAdminUsersMoreInfo();
-	    // adminUsersPage.clickOnAdminUsersNewButton();
-		// adminUsersPage.enterTextOnadminUsersUserNameField(adminUsername);
-		// adminUsersPage.enterTextOnadminUsersPasswordField(adminPassword);
-		// adminUsersPage.selectUserTypeFromSelectDropdown();
-		// adminUsersPage.clickonSaveButtonUsingJavaScriptExecutor();
 		boolean isAlertForUserCreationDisplayed = admin.isAlertForUserCreationDisplayed();
 		assertTrue(isAlertForUserCreationDisplayed, Constants.adminInvalidUsersUserCreationMessage);
 

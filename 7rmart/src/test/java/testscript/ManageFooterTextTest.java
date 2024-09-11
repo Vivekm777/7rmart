@@ -26,12 +26,6 @@ public class ManageFooterTextTest extends Base {
 		loginPage.clickOnSigInButton();
 		ManageFooterTextPage footertextpage = new ManageFooterTextPage(driver);
 		footertextpage.clickOnManageFooterTextMoreInfo().clickOnFooterTextActionButton().clearTextOnfooterTextAddressField().EnterTextOnfooterTextAddressField(address).EnterTextOnFooterTextEmailField(email).EnterTextOnFooterTextPhoneNumberField(phoneNumber).clickOnUpdateButton();
-		// footertextpage.clickOnFooterTextActionButton();
-		// footertextpage.clearTextOnfooterTextAddressField();
-		// footertextpage.EnterTextOnfooterTextAddressField(address);
-		// footertextpage.EnterTextOnFooterTextEmailField(email);
-		// footertextpage.EnterTextOnFooterTextPhoneNumberField(phoneNumber);
-		// footertextpage.clickOnUpdateButton();
 		boolean isFooterTextUpdated = footertextpage.isFooterTextUpdated();
 		assertTrue(isFooterTextUpdated, Constants.InvalidFooterTextUpdateMessage);
 

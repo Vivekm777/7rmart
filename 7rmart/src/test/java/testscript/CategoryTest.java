@@ -32,13 +32,6 @@ public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException,
 	   login.clickOnSigInButton();	
 	   CategoryPage categorypage=new CategoryPage(driver);
 	   categorypage.clickOnCategoryMoreInfo().clickonlistCategoriesNewButton().enterTextOnaddcategoryCategoryField(categoryname).clickOnselectGroupOption().uploadImageUsingaddcategoryChoseFileButton().clickOnshowOnTopMenuRadioButton().clickOnshowOnLeftMenuRadioButton().clickOnAddCategorysaveButton();
-	   //categorypage.clickonlistCategoriesNewButton();
-	   //categorypage.enterTextOnaddcategoryCategoryField(category);
-	   //categorypage.clickOnselectGroupOption();
-	   //categorypage.uploadImageUsingaddcategoryChoseFileButton();
-	   //categorypage.clickOnshowOnTopMenuRadioButton();
-	   //categorypage.clickOnshowOnLeftMenuRadioButton();
-	   //categorypage.clickOnAddCategorysaveButton();
 	   boolean isAlertForNewCategoryCreationCreated =categorypage.isAlertForNewCategoryCreationCreated();
 	   assertTrue(isAlertForNewCategoryCreationCreated,Constants.InvalidCategoryCreationMessage);
 	   

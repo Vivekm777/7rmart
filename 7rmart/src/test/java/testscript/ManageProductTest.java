@@ -22,8 +22,6 @@ public class ManageProductTest extends Base {
 		loginPage.clickOnSigInButton();
 		ManageProductPage manageproduct = new ManageProductPage(driver);
 		manageproduct.clickOnManageProductMoreInfo().clickOnProductDeletionButton().AcceptAlert();
-		//manageproduct.clickOnProductDeletionButton();
-		//manageproduct.AcceptAlert();
 		boolean isProductDeletionAlertDisplayed = manageproduct.isProductDeletionAlertDisplayed();
 		assertTrue(isProductDeletionAlertDisplayed,Constants.InvalidProductDeletionMessage);
 

@@ -38,11 +38,6 @@ public class SubCategoryTest extends Base {
 		loginPage.clickOnSigInButton();
 		SubCategoryPage subcategorypage = new SubCategoryPage(driver);
 		subcategorypage.clickonsubcategorymoreinfo().clickonlistofsubcategoryNewButton().selectcategoryFromDropdown().enterTextOnsubcategoryField(subCategory).UploadImageUsingChooseFileButton().clickOnSubCategoryInformationSaveButton();
-		//subcategorypage.clickonlistofsubcategoryNewButton();
-		//subcategorypage.selectcategoryFromDropdown();
-		//subcategorypage.enterTextOnsubcategoryField(subCategory);
-		//subcategorypage.UploadImageUsingChooseFileButton();
-		// subcategorypage.clickOnSubCategoryInformationSaveButton();
 		boolean isnewSubCategoryCreated = subcategorypage.isnewSubCategoryCreated();
 		assertTrue(isnewSubCategoryCreated,Constants.InvalidNewSubCategoryCreationMessage);
 

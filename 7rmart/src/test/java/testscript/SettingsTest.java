@@ -23,11 +23,6 @@ public class SettingsTest extends Base {
 		loginPage.clickOnSigInButton();
 		Settings settings = new Settings(driver);
 		settings.clickOnSettingsButton().clickOnManageMenuButton().clickOnmenuManagementNewButton().enterTextOnMenuNameField(menuName).selectParentMenuFromDropdown().clickonSaveButton();
-		//settings.clickOnManageMenuButton();
-		//settings.clickOnmenuManagementNewButton();
-		//settings.enterTextOnMenuNameField(menuName);
-		//settings.selectParentMenuFromDropdown();
-		//settings.clickonSaveButton();
 		boolean isUserAbleToCreateNewMenu = settings.isUserAbleToCreateNewMenu();
 		assertTrue(isUserAbleToCreateNewMenu,Constants.InvalidMenuCreationMessage);
 

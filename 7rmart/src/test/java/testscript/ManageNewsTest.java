@@ -23,9 +23,6 @@ public class ManageNewsTest extends Base {
 		loginPage.clickOnSigInButton();
 		ManageNewsPage managenews = new ManageNewsPage(driver);
 		managenews.clickOnManageNewsMoreInfo().clickOnManageNewsNew().enterTextOnEnterTheNewsTextField(news).clickOnSaveNewsButton();
-		//managenews.clickOnManageNewsNew();
-		//managenews.enterTextOnEnterTheNewsTextField(news);
-		//managenews.clickOnSaveNewsButton();
 		boolean isAletForNewscreationDisplayed = managenews.isAlertForNewsCreationDisplayed();
 		assertTrue(isAletForNewscreationDisplayed,Constants.InvalidNewsCreationMessage);
 
