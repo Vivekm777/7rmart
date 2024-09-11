@@ -15,18 +15,18 @@ import pages.LoginPage;
 import pages.ManageContactPage;
 import utilities.ExcelUtility;
 
-public class CategoryTest extends Base {
+    public class CategoryTest extends Base {
 	public CategoryPage category;
 	public AdminUsersPage admin;
 	public LoginPage login;	
 	
 	
-@Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to create new category in the category page")
-public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException, InterruptedException {
+      @Test(retryAnalyzer = retry.Retry.class,description = "To verify user is able to create new category in the category page")
+       public void verifyUserIsAbleToAddNewCategory() throws IOException, AWTException, InterruptedException {
 	   String userName=ExcelUtility.getStringData(1, 0, "LoginPage");
 	   String password=ExcelUtility.getStringData(1, 1, "LoginPage");
 	   String categoryname=ExcelUtility.getStringData(1, 0,"Category Page");
-	  LoginPage login=new LoginPage(driver);
+	   LoginPage login=new LoginPage(driver);
 	   login.enterUserNameOnUserField(userName);
 	   login.enterPasswordonPasswordField(password);
 	   login.clickOnSigInButton();	

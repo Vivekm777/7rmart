@@ -1,4 +1,4 @@
- package testscript;
+package testscript;
 
 import static org.testng.Assert.assertTrue;
 
@@ -16,16 +16,16 @@ public class AdminUsersTest extends Base {
 	public AdminUsersPage admin;
 	public LoginPage login;
 	public CategoryPage category;
-	
+
 	@Test(retryAnalyzer = retry.Retry.class, description = "To verify user is able to add new admin users in the adminuserspage")
-	public void verifyUserIsAbleToAddAdminUsers() throws IOException {
+	    public void verifyUserIsAbleToAddAdminUsers() throws IOException {
 		String userName = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		String adminUsername = ExcelUtility.getStringData(1, 0, "Admin Users Page");
 		String adminPassword = ExcelUtility.getStringData(1, 1, "Admin Users Page");
-	    login = new LoginPage(driver);
-	    admin=login.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-	    category=admin.clickOnAdminUsersMoreInfo().clickOnAdminUsersNewButton().enterTextOnadminUsersUserNameField(adminUsername).enterTextOnadminUsersPasswordField(adminPassword).selectUserTypeFromSelectDropdown().clickonSaveButtonUsingJavaScriptExecutor();
+		login = new LoginPage(driver);
+		admin = login.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
+		category = admin.clickOnAdminUsersMoreInfo().clickOnAdminUsersNewButton().enterTextOnadminUsersUserNameField(adminUsername).enterTextOnadminUsersPasswordField(adminPassword).selectUserTypeFromSelectDropdown().clickonSaveButtonUsingJavaScriptExecutor();
 		boolean isAlertForUserCreationDisplayed = admin.isAlertForUserCreationDisplayed();
 		assertTrue(isAlertForUserCreationDisplayed, Constants.adminInvalidUsersUserCreationMessage);
 

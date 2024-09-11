@@ -21,8 +21,6 @@ public class LoginTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-		// loginPage.enterPasswordonPasswordField(password);
-		// loginPage.clickOnSigInButton();
 		boolean isHomepageDisplayed = loginPage.isHomePageLoaded();
 		assertTrue(isHomepageDisplayed, Constants.InvalidLoginMessage);
 	}
@@ -33,8 +31,6 @@ public class LoginTest extends Base {
 		String password = ExcelUtility.getStringData(2, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-		//loginPage.enterPasswordonPasswordField(password);
-		//loginPage.clickOnSigInButton();
 		boolean isAlertdisplayed = loginPage.isAlertMessageDisplayed();
 		assertTrue(isAlertdisplayed, Constants.validLoginMessage);
 	}
@@ -45,8 +41,6 @@ public class LoginTest extends Base {
 		String password = ExcelUtility.getStringData(3, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-		//loginPage.enterPasswordonPasswordField(password);
-		//loginPage.clickOnSigInButton();
 		boolean isAlertdisplayed = loginPage.isAlertMessageDisplayed();
 		assertTrue(isAlertdisplayed,Constants.validloginMessage);
 
@@ -55,12 +49,8 @@ public class LoginTest extends Base {
 	@Test(dataProvider = "loginprovider", retryAnalyzer = retry.Retry.class, description = "to verify user is unable to login to the application using Invalid username and Invalid password")
 	public void VerifyTheUserIsAbleToLoginUsingInvalidUsernameAndInvalidPassword(String userName, String password)
 			throws IOException {
-		// String userName=ExcelUtility.getStringData(4, 0, "LoginPage");
-		// String password=ExcelUtility.getStringData(4, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserField(userName).enterPasswordonPasswordField(password).clickOnSigInButton();
-		//loginPage.enterPasswordonPasswordField(password);
-		//loginPage.clickOnSigInButton();
 		boolean isAlertdisplayed = loginPage.isAlertMessageDisplayed();
 		assertTrue(isAlertdisplayed, Constants.validloginmessage);
 
